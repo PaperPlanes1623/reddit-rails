@@ -1,0 +1,11 @@
+<%= @topic.id ? 'Edit' : 'Create' %>
+
+<%= form_for [@sub, @topic] do |f| %>
+  <%= f.label :name%>
+  <%= f.text_field :name, required: true%>
+
+  <%= f.label :body%>
+  <%= f.text_area :body, required: true%>
+
+  <%= f.submit%>
+<% end%>
